@@ -1,4 +1,4 @@
-public class Album {
+public class Album implements Comparable<Album> {
 
     private int id;
     private String artist;
@@ -41,13 +41,16 @@ public class Album {
         this.numSongs = numSongs;
     }
 
-
     //toString method properly formats album details
     @Override
     public String toString() {
         return String.format(id + ": " + numSongs + " -- " + artist);
     }
 
+    //Comparator. Compares numSongs on two albums
 
+    public int compareTo(Album secondAlbum) {
+        return Integer.compare(this.numSongs, secondAlbum.numSongs);
+    }
 }
 
