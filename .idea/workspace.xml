@@ -4,8 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="155ab8f8-d6a4-4690-918d-098c7fd79c55" name="Changes" comment="Implemented partition method">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="155ab8f8-d6a4-4690-918d-098c7fd79c55" name="Changes" comment="Implemented Insert Test">
       <change beforePath="$PROJECT_DIR$/Tests/AlbumTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/AlbumTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -66,7 +65,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.AlbumTest.testInsert">
+  <component name="RunManager" selected="JUnit.AlbumTest.testDeleteSingleNode">
     <configuration name="AlbumTest.compareAlbumsTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="PA02_DLL" />
       <option name="PACKAGE_NAME" value="" />
@@ -87,21 +86,21 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AlbumTest.testInsert" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="AlbumTest.testDeleteSingleNode" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="PA02_DLL" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="AlbumTest" />
-      <option name="METHOD_NAME" value="testInsert" />
+      <option name="METHOD_NAME" value="testDeleteSingleNode" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AlbumTest.toString" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="AlbumTest.testInsert" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="PA02_DLL" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="AlbumTest" />
-      <option name="METHOD_NAME" value="toString" />
+      <option name="METHOD_NAME" value="testInsert" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -119,11 +118,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.AlbumTest.testDeleteSingleNode" />
         <item itemvalue="JUnit.AlbumTest.testInsert" />
         <item itemvalue="JUnit.AlbumTest.testAppend" />
         <item itemvalue="JUnit.AlbumTest.compareAlbumsTest" />
         <item itemvalue="JUnit.AlbumTest.toStringTest" />
-        <item itemvalue="JUnit.AlbumTest.toString" />
       </list>
     </recent_temporary>
   </component>
@@ -135,7 +134,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1680133807470</updated>
-      <workItem from="1680133808855" duration="16763000" />
+      <workItem from="1680133808855" duration="17103000" />
     </task>
     <task id="LOCAL-00001" summary="Created new class: Album.java">
       <created>1680133882244</created>
@@ -221,7 +220,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680219198139</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Implemented Insert Test">
+      <created>1680219757681</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1680219757681</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -251,17 +257,7 @@
     <MESSAGE value="Implemented Delete and getIndex methods" />
     <MESSAGE value="Implemented shuffle method" />
     <MESSAGE value="Implemented partition method" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implemented partition method" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/Tests/AlbumTest.java</url>
-          <line>50</line>
-          <option name="timeStamp" value="8" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="Implemented Insert Test" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implemented Insert Test" />
   </component>
 </project>

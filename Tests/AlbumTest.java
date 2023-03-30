@@ -57,4 +57,12 @@ class AlbumTest {
 
         Assertions.assertEquals(expected, actual);
     }
+
+    @Test
+    public void testDeleteSingleNode() {
+        DoublyLinkedList<Integer> list = new DoublyLinkedList<>();
+        list.insert(0, 1);
+        Assertions.assertEquals(Integer.valueOf(1), list.delete(0).data);
+        Assertions.assertEquals(0, list.size);
+    }
 }
