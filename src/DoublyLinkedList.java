@@ -109,19 +109,19 @@ public class DoublyLinkedList<T extends Comparable<T>> {
 
     public String toString() {
         if (head == null) {
-            return "Invalid entry. List is empty."
+            return "Invalid entry. List is empty.";
         }
 
         StringBuilder sb = new StringBuilder();
         Node current = head;
 
-        while (current != null){
+        while (current != null) {
             sb.append(current.data);
 
             if (current.next != null) {
                 sb.append(" -> ");
             }
-            current.next;
+            current = current.next;
         }
         sb.append(" -> NULL");
         return sb.toString();
@@ -157,7 +157,7 @@ public class DoublyLinkedList<T extends Comparable<T>> {
         Node p1 = head;
         Node p2 = secondHalf;
 
-        while (p1 != null && p2!= null) {
+        while (p1 != null && p2 != null) {
             Node next1 = p1.next;
             Node next2 = p2.next;
 
@@ -174,5 +174,28 @@ public class DoublyLinkedList<T extends Comparable<T>> {
         return head;
     }
 
+    public DoublyLinkedList partition(int data) {
+        DoublyLinkedList newList = new DoublyLinkedList();
+        Node current = head;
 
+        while (current != null) {
+            if (current.data.compareTo(data) >= 0) {
+                newList.append(current.data);
+
+                if (current.prev != null) {
+                    current.prev.next = current.next;
+                } else {
+                    head = current.next;
+                }
+
+                if (current.next != null) {
+                    current.next.prev = current.prev;
+                } else {
+                    tail = current.prev;
+                }
+            }
+            current = current.next;
+        }
+        return newList;
+    }
 }
