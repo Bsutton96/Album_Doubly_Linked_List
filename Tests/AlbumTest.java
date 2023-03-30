@@ -43,4 +43,18 @@ class AlbumTest {
         System.out.println(String.valueOf(node3));
 
     }
+
+    @Test
+    public void testInsert() {
+        DoublyLinkedList<Integer> list = new DoublyLinkedList<>();
+
+        list.insert(0, 1);
+        list.insert(1, 2);
+        list.insert(2, 3);
+
+        String expected = "1 -> 2 -> 3 -> NULL";
+        String actual = list.toString();
+
+        Assertions.assertEquals(expected, actual);
+    }
 }

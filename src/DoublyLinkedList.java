@@ -37,13 +37,17 @@ public class DoublyLinkedList<T extends Comparable<T>> {
     }
 
     //Used to insert into the list
-    public Node insert(int location, T data) {
+    public Node<T> insert(int location, T data) {
         if (location < 0 || location > size) {
             throw new IllegalArgumentException("Location is out of bounds");
         }
 
         Node<T> toInsert = new Node<>(data);
-        if (location == 0) {
+        if (head == null) {
+            // list is empty
+            head = toInsert;
+            tail = toInsert;
+        } else if (location == 0) {
             //Insert Node at head
             toInsert.next = head;
             head.prev = toInsert;
@@ -55,7 +59,7 @@ public class DoublyLinkedList<T extends Comparable<T>> {
             tail = toInsert;
         } else {
             //Insert Node into middle
-            Node current = getNode(location);
+            Node<T> current = getNode(location);
             current.prev.next = toInsert;
             toInsert.prev = current.prev;
             current.prev = toInsert;
