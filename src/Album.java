@@ -48,7 +48,6 @@ public class Album implements Comparable<Album> {
     }
 
     //Comparator. Compares numSongs on two albums
-
     public int compareTo(Album secondAlbum) {
         return Integer.compare(this.numSongs, secondAlbum.numSongs);
     }
