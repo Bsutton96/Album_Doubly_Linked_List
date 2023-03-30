@@ -80,4 +80,16 @@ class AlbumTest {
         Assertions.assertEquals(4, list.getIndex(5));
         Assertions.assertEquals(-1, list.getIndex(6));
     }
+
+    @Test
+    void testToString() {
+        DoublyLinkedList<Integer> list = new DoublyLinkedList<>();
+        Assertions.assertEquals("Invalid entry. List is empty.", list.toString());
+
+        list.append(1);
+        list.append(2);
+        list.append(3);
+        Assertions.assertEquals("1 -> 2 -> 3 -> NULL", list.toString());
+        
+    }
 }
