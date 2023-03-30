@@ -66,5 +66,46 @@ public class DoublyLinkedList<T extends Comparable<T>> {
         return toInsert;
     }
 
+    public Node delete(int location) {
+        if (head == null) {
+            throw new IllegalArgumentException("The list is empty");
+        }
+        Node current = head;
+        if (location == 0) {
+            head = head.next;
+            if (head != null) {
+                head.prev = null;
+            }
+            size--;
+            return current;
+        }
+        for (int i = 0; i < location; i++) {
+            if (current.next == null) {
+                throw new IllegalArgumentException("This location does not exist.");
+            }
+            current = current.next;
+        }
+        Node deletedNode = current;
+        current.prev.next = current.next;
+        if (current.next != null) {
+            current.next.prev = current.prev;
+        }
+        size--;
+        return deletedNode;
+    }
 
+    public int getIndex(T data) {
+        Node<T> current = head;
+        int index = 0;
+        while (current != null) {
+            if (current.data.equals(data)) {
+                return index;
+            }
+            current = current.next;
+            index++;
+        }
+        return -1;
+    }
+
+    
 }

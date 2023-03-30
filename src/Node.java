@@ -1,6 +1,6 @@
 public class Node<T extends Comparable<T>> {
 
-    private T data;
+    public T data;
 
     Node prev;
 
