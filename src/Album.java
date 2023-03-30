@@ -1,4 +1,4 @@
-public class Album implements Comparable<Album> {
+public class Album {
 
     private int id;
 
