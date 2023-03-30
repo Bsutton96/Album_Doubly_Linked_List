@@ -4,10 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="155ab8f8-d6a4-4690-918d-098c7fd79c55" name="Changes" comment="Created toString method&#10;&#10;Implemented toString test">
+    <list default="true" id="155ab8f8-d6a4-4690-918d-098c7fd79c55" name="Changes" comment="added comparator for numSongs, implemented compare test">
+      <change afterPath="$PROJECT_DIR$/src/DoublyLinkedList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Node.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Tests/AlbumTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/AlbumTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Album.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Album.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,8 +18,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="JUnit5 Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -63,7 +64,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.AlbumTest.compareAlbumsTest">
+  <component name="RunManager" selected="JUnit.AlbumTest.testAppend">
     <configuration name="AlbumTest.compareAlbumsTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="PA02_DLL" />
       <option name="PACKAGE_NAME" value="" />
@@ -79,6 +80,16 @@
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="AlbumTest" />
       <option name="METHOD_NAME" value="newAlbum" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AlbumTest.testAppend" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="PA02_DLL" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="AlbumTest" />
+      <option name="METHOD_NAME" value="testAppend" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -106,6 +117,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.AlbumTest.testAppend" />
         <item itemvalue="JUnit.AlbumTest.compareAlbumsTest" />
         <item itemvalue="JUnit.AlbumTest.toStringTest" />
         <item itemvalue="JUnit.AlbumTest.toString" />
@@ -121,7 +133,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1680133807470</updated>
-      <workItem from="1680133808855" duration="3522000" />
+      <workItem from="1680133808855" duration="6483000" />
     </task>
     <task id="LOCAL-00001" summary="Created new class: Album.java">
       <created>1680133882244</created>
@@ -165,7 +177,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680135605776</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="added comparator for numSongs, implemented compare test">
+      <created>1680137484654</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1680137484654</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -188,6 +207,7 @@
     <MESSAGE value="Created Basis for tests. Initial test to create newAlbum is successful.&#10;&#10;Temporarily removed 'implements comparable' to avoid errors until method is built" />
     <MESSAGE value="Established setters for&#10;&#10;id&#10;artist&#10;title&#10;numSongs&#10;&#10;Edited test file:&#10;&#10;removed getter tests - unnecessary" />
     <MESSAGE value="Created toString method&#10;&#10;Implemented toString test" />
-    <option name="LAST_COMMIT_MESSAGE" value="Created toString method&#10;&#10;Implemented toString test" />
+    <MESSAGE value="added comparator for numSongs, implemented compare test" />
+    <option name="LAST_COMMIT_MESSAGE" value="added comparator for numSongs, implemented compare test" />
   </component>
 </project>
