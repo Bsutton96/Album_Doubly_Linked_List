@@ -8,19 +8,5 @@ class AlbumTest {
     void newAlbum() {
         Album Californication = new Album(001, "Californication", "Red Hot Chili Peppers", 15);
     }
-    @Test
-    void getId() {
-    }
 
-    @Test
-    void getArtist() {
-    }
-
-    @Test
-    void getTitle() {
-    }
-
-    @Test
-    void getNumSongs() {
-    }
 }
