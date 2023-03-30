@@ -8,7 +8,8 @@ public class Album implements Comparable<Album> {
 
     private int numSongs;
 
-    public Album(id, artist, title, numSongs) {
+    //Creating album, assigning id, artist, tile, number of songs
+    public Album(int id, String artist, String title, int numSongs) {
         this.id = id;
         this.artist = artist;
         this.title = title;
@@ -17,5 +18,21 @@ public class Album implements Comparable<Album> {
     }
 
 
+    // Getters
+    public int getId() {
+        return id;
+    }
+
+    public String getArtist() {
+        return artist;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public int getNumSongs() {
+        return numSongs;
+    }
 
 }
