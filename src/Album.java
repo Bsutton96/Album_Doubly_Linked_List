@@ -42,6 +42,12 @@ public class Album {
     }
 
 
+    //toString method properly formats album details
+    @Override
+    public String toString() {
+        return String.format(id + ": " + numSongs + " -- " + artist);
+    }
 
 
 }
+

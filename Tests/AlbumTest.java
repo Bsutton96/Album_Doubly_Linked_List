@@ -6,7 +6,13 @@ class AlbumTest {
 
     @Test
     void newAlbum() {
-        Album Californication = new Album(001, "Californication", "Red Hot Chili Peppers", 15);
+        Album Californication = new Album(001, "Red Hot Chili Peppers", "Californication", 15);
     }
 
+    @Test
+    void toStringTest() {
+        Album Californication = new Album(001, "Red Hot Chili Peppers", "Californication", 15);
+
+        System.out.println(Californication.toString());
+    }
 }
