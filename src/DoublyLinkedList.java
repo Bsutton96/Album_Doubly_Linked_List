@@ -107,5 +107,72 @@ public class DoublyLinkedList<T extends Comparable<T>> {
         return -1;
     }
 
-    
+    public String toString() {
+        if (head == null) {
+            return "Invalid entry. List is empty."
+        }
+
+        StringBuilder sb = new StringBuilder();
+        Node current = head;
+
+        while (current != null){
+            sb.append(current.data);
+
+            if (current.next != null) {
+                sb.append(" -> ");
+            }
+            current.next;
+        }
+        sb.append(" -> NULL");
+        return sb.toString();
+    }
+
+    public Node shuffle() {
+        if (head == null || head.next == null) {
+            return head;
+        }
+
+        Node slow = head;
+        Node fast = head.next;
+
+        while (fast != null && fast.next != null) {
+            slow = slow.next;
+            fast = fast.next.next;
+        }
+
+        Node secondHalf = slow.next;
+        slow.next = null;
+
+        Node prev = null;
+        Node current = secondHalf;
+        while (current != null) {
+            Node next = current.next;
+            current.next = prev;
+            current.prev = next;
+            prev = current;
+            current = next;
+        }
+        secondHalf = prev;
+
+        Node p1 = head;
+        Node p2 = secondHalf;
+
+        while (p1 != null && p2!= null) {
+            Node next1 = p1.next;
+            Node next2 = p2.next;
+
+            p1.next = p2;
+            p2.prev = p1;
+            p2.next = next1;
+
+            if (next1 != null) {
+                next1.prev = p2;
+            }
+            p1 = next1;
+            p2 = next2;
+        }
+        return head;
+    }
+
+
 }
