@@ -65,7 +65,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.AlbumTest.testDeleteSingleNode">
+  <component name="RunManager" selected="JUnit.AlbumTest.testGetIndex">
     <configuration name="AlbumTest.compareAlbumsTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="PA02_DLL" />
       <option name="PACKAGE_NAME" value="" />
@@ -96,6 +96,16 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="AlbumTest.testGetIndex" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="PA02_DLL" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="AlbumTest" />
+      <option name="METHOD_NAME" value="testGetIndex" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="AlbumTest.testInsert" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="PA02_DLL" />
       <option name="PACKAGE_NAME" value="" />
@@ -106,23 +116,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AlbumTest.toStringTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="PA02_DLL" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="AlbumTest" />
-      <option name="METHOD_NAME" value="toStringTest" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.AlbumTest.testGetIndex" />
         <item itemvalue="JUnit.AlbumTest.testDeleteSingleNode" />
         <item itemvalue="JUnit.AlbumTest.testInsert" />
         <item itemvalue="JUnit.AlbumTest.testAppend" />
         <item itemvalue="JUnit.AlbumTest.compareAlbumsTest" />
-        <item itemvalue="JUnit.AlbumTest.toStringTest" />
       </list>
     </recent_temporary>
   </component>
