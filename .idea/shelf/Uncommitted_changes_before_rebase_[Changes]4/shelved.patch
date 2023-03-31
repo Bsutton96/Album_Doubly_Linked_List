@@ -1,0 +1,44 @@
+Index: src/DoublyLinkedList.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>public class DoublyLinkedList<T extends Comparable<T>> {\n\n    Node<T> head = null;\n    Node<T> tail = null;\n    int size = 0;\n\n    public DoublyLinkedList() {\n\n    }\n\n    public Node append(T data) {\n        Node<T> toAppend = new Node<>(data);\n\n        if (head == null) {\n            head = toAppend;\n            tail = toAppend;\n        } else {\n            tail.next = toAppend;\n            toAppend.prev = tail;\n            tail = toAppend;\n        }\n        return toAppend;\n    }\n\n    //getNode is used for retrieval of specified position\n    private Node getNode(int location) {\n        if (location < 0 || location >= size) {\n            throw new IllegalArgumentException(\"Location is out of bounds\");\n        }\n\n        Node current = head;\n        for (int i = 0; i < location; i++) {\n            current = current.next;\n        }\n\n        return current;\n    }\n\n    //Used to insert into the list\n    public Node insert(int location, T data) {\n        if (location < 0 || location > size) {\n            throw new IllegalArgumentException(\"Location is out of bounds\");\n        }\n\n        Node<T> toInsert = new Node<>(data);\n        if (location == 0) {\n            //Insert Node at head\n            toInsert.next = head;\n            head.prev = toInsert;\n            head = toInsert;\n        } else if (location == size) {\n            //Insert Node at tail\n            tail.next = toInsert;\n            toInsert.prev = tail;\n            tail = toInsert;\n        } else {\n            //Insert Node into middle\n            Node current = getNode(location);\n            current.prev.next = toInsert;\n            toInsert.prev = current.prev;\n            current.prev = toInsert;\n            toInsert.next = current;\n        }\n\n        size++;\n        return toInsert;\n    }\n\n\n}\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/DoublyLinkedList.java b/src/DoublyLinkedList.java
+--- a/src/DoublyLinkedList.java	(revision dee7dd7ec233622f5e39ba1b98635b8d643e49dc)
++++ b/src/DoublyLinkedList.java	(date 1680148041638)
+@@ -66,5 +66,33 @@
+         return toInsert;
+     }
+ 
++    public Node delete(int location) {
++        if (head == null) {
++            throw new IllegalArgumentException("The list is empty");
++        }
++        Node current = head;
++        if (location == 0) {
++            head = head.next;
++            if (head != null) {
++                head.prev = null;
++            }
++            size--;
++            return current;
++        }
++        for (int i = 0; i < location; i++) {
++            if (current.next == null) {
++                throw new IllegalArgumentException("This location does not exist.");
++            }
++            current = current.next;
++        }
++        Node deletedNode = current;
++        current.prev.next = current.next;
++        if (current.next != null) {
++            current.next.prev = current.prev;
++        }
++        size--;
++        return deletedNode;
++    }
++
+ 
+ }
